@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.DS_Store
+
+R/credentials.R
+R/key.R
+R/draft.R
