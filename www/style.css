@@ -1,0 +1,76 @@
+@import url("//fonts.googleapis.com/css?family=Spectral");
+
+body, label {
+  font-family: 'Spectral', serif;
+  font-size: 19px;
+  color: #20474A;
+  font-weight: 500;
+}
+
+h1, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.well {
+  border-radius: 30px;
+  border: none;
+  text-align: center;
+}
+
+.modal-content {
+  margin-top: 250px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.btn, .btn:focus {
+  background-color: #DEF5FF;
+  font-size: 19px;
+  color: #20474A;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: #E4EAEC;
+  color: #20474A;
+}
+
+.btn:active:focus {
+  color: #20474A;
+  outline: none;
+}
+
+.shiny-notification {
+  background-color: #E4EAEC;
+  border: 0;
+  border-radius: 10px;
+  color: #20474A;
+}
+
+.progress-bar {
+  background-color: #20474A;
+}
+
+#header {
+  height: 125px;
+  background-color: #DEF5FF;
+  margin-top: 150px;
+}
+
+#main {
+  height: 250px;
+  background-color: #E4EAEC;
+  padding-top: 75px;
+}
+
+#login_error, #sign_up_error {
+  color: #FF0000;
+  font-size: 17px;
+}
