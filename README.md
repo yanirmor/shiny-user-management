@@ -13,7 +13,7 @@ You are welcome to fork the repository and share any ideas and bugs by creating 
 #### Usage
 1\. To run a local version of the app, you'll have to set up your own **PostgreSQL** database  
 2\. Once you have it, create a table called **users** using 
-<a href = "https://github.com/yanirmor/shiny-user-management/R/db_tests.R">this script</a>  
+<a href = "https://github.com/yanirmor/shiny-user-management/blob/master/R/db_tests.R#L9">this script</a>  
 3\. Next, create two R scripts that will hold your secrets (make sure they are private!) 
 
 * The file `key.R` will hold a key chosen by you
