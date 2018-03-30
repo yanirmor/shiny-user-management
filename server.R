@@ -61,7 +61,6 @@ function(input, output, session) {
           last_login = validation$last_login
         )
       )
-      
       removeModal()
     }
   })
@@ -92,7 +91,6 @@ function(input, output, session) {
           username = input$sign_up_username, 
           last_login = validation$last_login)
       )
-      
       removeModal()
     }
   })

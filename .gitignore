@@ -6,5 +6,6 @@
 R/credentials.R
 R/key.R
 R/draft.R
+R/db_tests.R
 
 rsconnect/*
