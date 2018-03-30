@@ -63,12 +63,12 @@ validate_sign_up <- function(username, password, verify) {
     return(list(result = F, message = "Maximum 12 characters"))
   }
   
-  if (password != verify) {
-    return(list(result = F, message = "Passwords don't match"))
-  }
-  
   if (!grepl("^[[:alnum:]]+$", username) | !grepl("^[[:alnum:]]+$", password)) {
     return(list(result = F, message = "Only letters and digits are allowed"))
+  }
+  
+  if (password != verify) {
+    return(list(result = F, message = "Passwords don't match"))
   }
   
   withProgress(

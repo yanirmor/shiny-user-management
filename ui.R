@@ -11,7 +11,7 @@ fluidPage(
     h5("Visit my", a(
       "GitHub", 
       href = "https://github.com/yanirmor/shiny-user-management", 
-      target="_blank"
+      target = "_blank"
     ))
   ))),
   
