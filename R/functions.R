@@ -12,7 +12,7 @@ connect_to_db <- function() {
 
 read_users_table <- function() {
   connection <- connect_to_db()
-  df <- dbReadTable(conn = connection, name = "users")
+  df <- dbReadTable(conn = connection, name = "user_management")
   dbDisconnect(conn = connection)
   return(df)
 }

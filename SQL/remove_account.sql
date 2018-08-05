@@ -1,4 +1,4 @@
-UPDATE users
+UPDATE user_management
   SET 
     username = NULL, 
     password_hash = NULL, 

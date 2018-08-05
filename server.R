@@ -89,7 +89,8 @@ function(input, output, session) {
       active_user(
         list(
           username = input$sign_up_username, 
-          last_login = validation$last_login)
+          last_login = validation$last_login
+        )
       )
       removeModal()
     }

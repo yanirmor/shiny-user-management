@@ -1,4 +1,6 @@
 fluidPage(
+  title = "Shiny User Management",
+  
   # css and js --------------------------------------------------------------
   includeCSS("www/style.css"),
   includeScript("www/script.js"),
