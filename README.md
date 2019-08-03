@@ -1,4 +1,4 @@
-# <img align="left" height="30px" src="www/icons/user.png"></img> R Shiny User Management & Authentication
+# <img align="left" height="40px" src="www/icons/user.png"></img> R Shiny User Management & Authentication
 
 Demonstration of user management and authentication system in R Shiny  
 [https://yanirmor.shinyapps.io/shiny-user-management](https://yanirmor.shinyapps.io/shiny-user-management)  
