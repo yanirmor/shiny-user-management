@@ -1,9 +1,7 @@
-# R Shiny User Management & Authentication
+# <img align="left" height="30px" src="www/icons/user.png"></img> R Shiny User Management & Authentication
 
 Demonstration of user management and authentication system in R Shiny  
 [https://yanirmor.shinyapps.io/shiny-user-management](https://yanirmor.shinyapps.io/shiny-user-management)  
-<img align="left" height="30px" src="www/icons/user.png"></img>  
-![](www/icons/user.png =x30)  
 
 ### About
 
@@ -21,4 +19,4 @@ Icon by [Typicons / Iconfinder](https://www.s-ings.com/typicons/) (CC BY-SA 3.0)
 
 ---
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
-Copyright © 2018 Yanir Mor
+Copyright © 2019 Yanir Mor
