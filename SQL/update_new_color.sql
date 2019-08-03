@@ -1,4 +1,4 @@
 UPDATE user_management
-SET is_enabled = NULL
+SET color = ?color
 WHERE username = ?username
   AND is_enabled = 'y';

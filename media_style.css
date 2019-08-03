@@ -1,0 +1,127 @@
+@media (max-width: 992px) {
+
+	/* general */
+
+	body { font-size: 15px; padding: 0 0 45px 0; }
+	.highlighted { font-size: 23px; }
+
+	/* header */
+
+	header { padding: 15px; flex-direction: column; }
+	header #header_title { font-size: 23px; }
+	header #header_title img { display: none; }
+	header #header_buttons img { height: 35px; margin: 10px 8px 0 8px; }
+
+	/* wrapper */
+
+	.wrapper { padding: 25px 35px; }
+	.wrapper .content-title { margin-bottom: 5px; }
+
+	/* inputs */
+
+	#sign_in_section .form-group, #sign_up_section .form-group { max-width: 230px; }
+	.form-control { margin-bottom: 12px; font-size: 14px; }
+	.btn, .btn:focus { padding: 8px 12px; font-size: 14px; margin-top: 12px; }
+
+	/* modals */
+
+	.modal-dialog { margin: auto; top: 10%; }
+	.modal-title { font-size: 19px; }
+	.modal-title img { height: 25px; }
+	.modal-content { padding: 18px; }
+
+	/* progress bar */
+
+	#shiny-notification-panel { margin: 15px; }
+	.shiny-notification { padding: 8px 16px; }
+
+	/* vr separator */
+
+	.vr-separator { width: 10%; margin: 0 10px; }
+	.vr-separator img { height: 45px; }
+
+	/* inline parent */
+
+	.inline-parent .btn { margin: 0 0 0 10px; padding: 6px 12px; }
+
+	/* about */
+
+	#about { line-height: 28px; }
+
+	/* dynamic ui */
+
+	#dynamic_ui { padding: 30px 0; }
+
+	/* signed in buttons */
+
+	#sign_out_button, #remove_account_button { width: 150px; }
+
+	/* footer */
+	footer { font-size: 14px; height: 45px; }
+}
+
+@media (max-width: 576px) {
+
+	/* general */
+
+	body { font-size: 15px; padding: 0 0 45px 0; }
+	.highlighted { font-size: 22px; }
+
+	/* header */
+
+	header { padding: 15px; flex-direction: column; }
+	header #header_title { font-size: 23px; text-align: center; }
+	header #header_title img { display: none; }
+	header #header_buttons img { height: 35px; margin: 10px 8px 0 8px; }
+
+	/* wrapper */
+
+	.wrapper { padding: 20px 25px; }
+	.wrapper .content-title { margin-bottom: 5px; }
+
+  /* forms */
+
+  #sign_in_section { margin-bottom: 40px; }
+  .signed-in-form { margin-bottom: 30px; }
+
+	/* inputs */
+
+	.form-group { max-width: 230px; margin: auto; }
+	.form-control { margin-bottom: 10px; font-size: 14px; }
+	.btn, .btn:focus { padding: 8px 12px; font-size: 14px; margin-top: 8px; }
+
+	/* modals */
+
+	.modal-dialog { margin: auto; top: 10%; max-width: 260px; }
+	.modal-title { font-size: 19px; }
+	.modal-title img { height: 25px; }
+	.modal-content { padding: 18px; }
+
+	/* progress bar */
+
+	#shiny-notification-panel { margin: 15px; }
+	.shiny-notification { padding: 8px 16px; }
+
+	/* vr separator */
+
+	.vr-separator { display: none; }
+
+	/* inline parent */
+
+	.inline-parent .btn { margin: 0 0 0 10px; padding: 6px 12px; }
+
+	/* about */
+
+	#about { line-height: 26px; }
+
+	/* dynamic ui */
+
+	#dynamic_ui { flex-direction: column; }
+
+	/* signed in buttons */
+
+	#sign_out_button, #remove_account_button { width: 150px; }
+
+	/* footer */
+	footer { font-size: 12px; height: 45px; }
+}

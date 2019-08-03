@@ -1,4 +1,4 @@
 UPDATE user_management
-SET is_enabled = NULL
+SET password = ?password
 WHERE username = ?username
   AND is_enabled = 'y';

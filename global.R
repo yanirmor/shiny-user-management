@@ -1,12 +1,17 @@
-# packages ----------------------------------------------------------------
-library(shiny)
-library(dplyr)
-library(rlang)
-library(RPostgres)
-library(DBI)
-library(digest)
-library(lubridate)
+# environment -----
+rm(list = ls())
+invisible(gc())
+options(encoding = "UTF-8", scipen = 999, stringsAsFactors = F)
+if (interactive()) options(shiny.autoreload = T)
 
-# scripts -----------------------------------------------------------------
-source("R/functions.R")
-source("R/modals.R")
+# packages -----
+suppressPackageStartupMessages({
+  library(shiny)
+  library(dplyr)
+  library(RPostgres)
+  library(DBI)
+  library(digest)
+})
+
+# scripts -----
+source(file = "functions.R")
