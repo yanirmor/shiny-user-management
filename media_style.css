@@ -7,7 +7,7 @@
 
 	/* header */
 
-	header { padding: 15px; flex-direction: column; }
+	header { padding: 15px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 	header #header_title { font-size: 23px; }
 	header #header_title img { display: none; }
 	header #header_buttons img { height: 35px; margin: 10px 8px 0 8px; }
@@ -69,7 +69,7 @@
 
 	/* header */
 
-	header { padding: 15px; flex-direction: column; }
+	header { padding: 15px; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 	header #header_title { font-size: 23px; text-align: center; }
 	header #header_title img { display: none; }
 	header #header_buttons img { height: 35px; margin: 10px 8px 0 8px; }
@@ -116,7 +116,7 @@
 
 	/* dynamic ui */
 
-	#dynamic_ui { flex-direction: column; }
+	#dynamic_ui { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 	/* signed in buttons */
 
@@ -124,4 +124,6 @@
 
 	/* footer */
 	footer { font-size: 12px; height: 45px; }
+	footer #licenses { font-size: 11px; }
+    footer #licenses > div { font-size: 10px; }
 }
