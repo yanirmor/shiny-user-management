@@ -47,6 +47,11 @@ observeEvent(input$sign_in_button, {
     updateTextInput(session = session, inputId = "sign_in_user", value = "")
     updateTextInput(session = session, inputId = "sign_in_password", value = "")
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign In", "Click", "Something Failed")
+    )
+    
     generic_modal(content = "Something went wrong, please try again")
     
   } else if (nrow(try_result) == 0) {
@@ -60,6 +65,11 @@ observeEvent(input$sign_in_button, {
     updateTextInput(session = session, inputId = "sign_in_user", value = "")
     updateTextInput(session = session, inputId = "sign_in_password", value = "")
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign In", "Click", "Credentials Failed")
+    )
+    
     generic_modal(content = "Username and/or password are wrong")
     
   } else {
@@ -70,5 +80,10 @@ observeEvent(input$sign_in_button, {
     active_user$color <- try_result$color
     
     session$sendCustomMessage(type = "aboutSectionHandler", message = "hide")
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign In", "Click", "Success")
+    )
   }
 })

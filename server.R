@@ -24,4 +24,9 @@ function(input, output, session) {
   
   # contact form -----
   source(file = "R/contact_form_server.R", local = T)$value
+  
+  # privacy notice -----
+  observeEvent(input$privacy_notice_agree, {
+    session$sendCustomMessage(type = "privacyNoticeOk", message = "placeholder")
+  })
 }

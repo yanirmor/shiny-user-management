@@ -35,6 +35,11 @@ observeEvent(input$sign_up_button, {
       value = ""
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign Up", "Click", "Validation Failed")
+    )
+    
     generic_modal(
       content = list(
         "Something went wrong.",
@@ -100,6 +105,11 @@ observeEvent(input$sign_up_button, {
     
     session$sendCustomMessage(type = "aboutSectionHandler", message = "hide")
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign Up", "Click", "Success")
+    )
+    
   } else if (
     grepl(
       pattern = "duplicate key value violates unique constraint", 
@@ -125,6 +135,11 @@ observeEvent(input$sign_up_button, {
       value = ""
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign Up", "Click", "Username Taken Failed")
+    )
+    
     generic_modal(content = "Username is already taken")
     
   } else {
@@ -145,6 +160,11 @@ observeEvent(input$sign_up_button, {
       session = session,
       inputId = "sign_up_verify_password",
       value = ""
+    )
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Sign Up", "Click", "Something Failed")
     )
     
     generic_modal(content = "Something went wrong, please try again")

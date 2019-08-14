@@ -1,4 +1,9 @@
 observeEvent(input$contact_button, {
+  session$sendCustomMessage(
+    type = "matomoEvent", 
+    message = c("Header Buttons", "Click", "Contact Form")
+  )
+  
   showModal(
     modalDialog(
       title = "Contact", 
@@ -68,6 +73,11 @@ observeEvent(input$contact_send, {
       error = T, 
       content = "contact form validation failed"
     )
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Contact Form", "Send", "Validation Failed")
+    )
   }
   
   req(second_validation_result)
@@ -121,6 +131,11 @@ observeEvent(input$contact_send, {
     updateTextInput(session = session, inputId = "contact_email", value = "")
     updateTextInput(session = session, inputId = "contact_message", value = "")
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Contact Form", "Send", "Success")
+    )
+    
     generic_modal(error = F, content = "The message was sent successfully")
     
   } else {
@@ -134,6 +149,11 @@ observeEvent(input$contact_send, {
     updateTextInput(session = session, inputId = "contact_name", value = "")
     updateTextInput(session = session, inputId = "contact_email", value = "")
     updateTextInput(session = session, inputId = "contact_message", value = "")
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Contact Form", "Send", "Something Failed")
+    )
     
     generic_modal(content = "Something went wrong, please try again")
   }
