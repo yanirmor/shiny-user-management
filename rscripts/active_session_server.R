@@ -45,7 +45,7 @@ observeEvent(input$signed_in_new_color_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/update_new_color.sql"),
+        sql = read_sql_file(path = "SQL/update_new_color.sql"),
         color = input$signed_in_new_color,
         username = active_user$username
       )
@@ -156,7 +156,7 @@ observeEvent(input$signed_in_new_password_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/update_new_password.sql"),
+        sql = read_sql_file(path = "SQL/update_new_password.sql"),
         password = hmac(
           key = Sys.getenv(x = "ENCRYPTION_KEY"),
           object = input$signed_in_new_password,
@@ -262,7 +262,7 @@ observeEvent(input$remove_account_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/remove_account.sql"),
+        sql = read_sql_file(path = "SQL/remove_account.sql"),
         username = active_user$username
       )
       

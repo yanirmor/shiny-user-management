@@ -79,39 +79,6 @@ header a:focus {
     text-decoration: none;
 }
 
-/* contact form */
-
-#my_email {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-
-    font-size: 15px;
-    font-weight: 600;
-    color: #498497;
-    margin-bottom: 15px;
-}
-
-#my_email img {
-    height: 30px;
-    margin-right: 5px;
-}
-
-#my_email a,
-#my_email a:hover,
-#my_email a:focus {
-    color: #498497;
-    text-decoration: none;
-}
-
 /* wrapper */
 
 .wrapper {
@@ -429,30 +396,4 @@ footer #licenses > div {
 
 footer #footer_copyright {
     margin-bottom: 15px;
-}
-
-
-footer #privacy_notice {
-    background-color: #e0dede;
-    padding: 5px;
-    font-size: 13px;
-    color: #000000;
-    
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-footer #privacy_notice_agree {
-    margin: 0 0 0 8px;
-    padding: 2px 6px;
-    font-size: inherit;
 }

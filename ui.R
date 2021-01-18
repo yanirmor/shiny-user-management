@@ -19,9 +19,7 @@ basicPage(
       rel = "stylesheet", 
       href = "https://fonts.googleapis.com/css?family=Open+Sans"
     ),
-    tags$title("R Shiny User Management & Authentication"),
-    
-    includeScript(path = "js/matomo_script.js")
+    tags$title("R Shiny User Management & Authentication")
   ),
   
   includeCSS(path = "style.css"),
@@ -48,12 +46,6 @@ basicPage(
         target = "_blank", 
         img(src = "icons/website.png"),
         title = "My Website"
-      ),
-      
-      actionLink(
-        inputId = "contact_button", 
-        label = img(src = "icons/email.png"),
-        title = "Contact"
       ),
       
       a(
@@ -100,12 +92,6 @@ basicPage(
           "Icon by Typicons / Iconfinder (CC BY-SA 3.0)"
         )
       )
-    ),
-    
-    div(
-      id = "privacy_notice",
-      span("This website uses cookies to improve your experience"),
-      actionButton(inputId = "privacy_notice_agree", label = "OK")
     )
   )
 )

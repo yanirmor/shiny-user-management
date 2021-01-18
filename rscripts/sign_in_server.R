@@ -10,7 +10,7 @@ observeEvent(input$sign_in_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/sign_in_validation.sql"),
+        sql = read_sql_file(path = "SQL/sign_in_validation.sql"),
         username = input$sign_in_user,
         password = hmac(
           key = Sys.getenv(x = "ENCRYPTION_KEY"),
