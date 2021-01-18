@@ -26,6 +26,11 @@ observeEvent(input$signed_in_new_color_button, {
       content = "new color validation failed"
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Color", "Validation Failed")
+    )
+    
     generic_modal(content = "Color must contain 2-20 letters")
   }
   
@@ -40,7 +45,7 @@ observeEvent(input$signed_in_new_color_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/update_new_color.sql"),
+        sql = read_sql_file(path = "SQL/update_new_color.sql"),
         color = input$signed_in_new_color,
         username = active_user$username
       )
@@ -69,6 +74,11 @@ observeEvent(input$signed_in_new_color_button, {
       error = T,
       content = attributes(try_result)$condition$message
     )
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Color", "Something Failed")
+    )
 
     generic_modal(content = "Something went wrong, please try again")
     
@@ -85,6 +95,11 @@ observeEvent(input$signed_in_new_color_button, {
       session = session, 
       input = "signed_in_new_color",
       value = ""
+    )
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Color", "Success")
     )
   }
 })
@@ -122,6 +137,11 @@ observeEvent(input$signed_in_new_password_button, {
       value = ""
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Password", "Validation Failed")
+    )
+    
     generic_modal(content = "Password must contain 6-12 letters or digits")
   }
   
@@ -136,7 +156,7 @@ observeEvent(input$signed_in_new_password_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/update_new_password.sql"),
+        sql = read_sql_file(path = "SQL/update_new_password.sql"),
         password = hmac(
           key = Sys.getenv(x = "ENCRYPTION_KEY"),
           object = input$signed_in_new_password,
@@ -182,6 +202,11 @@ observeEvent(input$signed_in_new_password_button, {
       value = ""
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Password", "Something Failed")
+    )
+    
     generic_modal(content = "Something went wrong, please try again")
     
   } else {
@@ -203,6 +228,11 @@ observeEvent(input$signed_in_new_password_button, {
       value = ""
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "New Password", "Success")
+    )
+    
     generic_modal(error = F, content = "Your password was updated successfully")
   }
 })
@@ -215,6 +245,11 @@ observeEvent(input$sign_out_button, {
   active_user$color <- NULL
   
   session$sendCustomMessage(type = "aboutSectionHandler", message = "show")
+  
+  session$sendCustomMessage(
+    type = "matomoEvent", 
+    message = c("Active Session", "Sign Out", "Success")
+  )
 })
 
 observeEvent(input$remove_account_button, {
@@ -227,7 +262,7 @@ observeEvent(input$remove_account_button, {
     expr = {
       query <- sqlInterpolate(
         conn = ANSI(), 
-        sql = read_sql_file(path = "sql/remove_account.sql"),
+        sql = read_sql_file(path = "SQL/remove_account.sql"),
         username = active_user$username
       )
       
@@ -256,6 +291,11 @@ observeEvent(input$remove_account_button, {
       content = attributes(try_result)$condition$message
     )
     
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "Remove Account", "Something Failed")
+    )
+    
     generic_modal(content = "Something went wrong, please try again")
     
   } else {
@@ -269,6 +309,11 @@ observeEvent(input$remove_account_button, {
     active_user$color <- NULL
     
     session$sendCustomMessage(type = "aboutSectionHandler", message = "show")
+    
+    session$sendCustomMessage(
+      type = "matomoEvent", 
+      message = c("Active Session", "Remove Account", "Success")
+    )
     
     generic_modal(error = F, content = "Your account was removed successfully")
   }

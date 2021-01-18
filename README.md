@@ -11,7 +11,6 @@ Once signed in, a user can see content specific to him/her (in this case, a favo
 
 ### Author
 Author: Yanir Mor  
-Email: contact@yanirmor.com  
 Website: [https://www.yanirmor.com](https://www.yanirmor.com)  
 
 ### Credits
@@ -19,4 +18,4 @@ Icon by [Typicons / Iconfinder](https://www.s-ings.com/typicons/) (CC BY-SA 3.0)
 
 ---
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)  
-Copyright © 2019 Yanir Mor
+Copyright © Yanir Mor

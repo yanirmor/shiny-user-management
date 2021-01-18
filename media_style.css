@@ -2,7 +2,7 @@
 
 	/* general */
 
-	body { font-size: 15px; padding: 0 0 45px 0; }
+	body { font-size: 15px; padding: 0 0 75px 0; }
 	.highlighted { font-size: 23px; }
 
 	/* header */
@@ -57,14 +57,14 @@
 	#sign_out_button, #remove_account_button { width: 150px; }
 
 	/* footer */
-	footer { font-size: 14px; height: 45px; }
+	footer { font-size: 14px; }
 }
 
 @media (max-width: 576px) {
 
 	/* general */
 
-	body { font-size: 15px; padding: 0 0 45px 0; }
+	body { font-size: 15px; padding: 0 0 75px 0; }
 	.highlighted { font-size: 22px; }
 
 	/* header */
@@ -123,7 +123,7 @@
 	#sign_out_button, #remove_account_button { width: 150px; }
 
 	/* footer */
-	footer { font-size: 12px; height: 45px; }
+	footer { font-size: 12px; }
 	footer #licenses { font-size: 11px; }
-    footer #licenses > div { font-size: 10px; }
+  footer #licenses > div { font-size: 10px; }
 }
