@@ -72,7 +72,8 @@ observeEvent(input$sign_up_button, {
           object = input$sign_up_password,
           algo = "sha512"
         ),
-        created_at = strftime(x = Sys.time(), tz = "UTC")
+        created_at = strftime(x = Sys.time(), tz = "UTC"),
+        is_enabled = 'y'
       )
       
       try_result <- try(
